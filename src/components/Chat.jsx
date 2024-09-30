@@ -8,15 +8,18 @@ import { ChatContext } from "../context/ChatContext";
 
 const Chat = () => {
   const { data } = useContext(ChatContext);
+  function handelOnclick(){
+    window.alert("Under Construction")
+  }
 
   return (
     <div className="chat">
       <div className="chatInfo">
         <span>{data.user?.displayName}</span>
         <div className="chatIcons">
-          <img src={Cam} alt="" />
-          <img src={Add} alt="" />
-          <img src={More} alt="" />
+          <img onClick={handelOnclick} src={Cam} alt="" />
+          <img onClick={handelOnclick} src={Add} alt="" />
+          <img onClick={handelOnclick} src={More} alt="" />
         </div>
       </div>
       <Messages />
